@@ -1,17 +1,20 @@
 body{
-    background-color: black;
+    background-color: #caf0f8;
+    color: black;
+    margin:0;
 }
 header{
-    background-color: beige;
+    background-color: #48cae4;
     padding:20px;
     
 }
 .nav-bar{
-    background-color: beige;
+    background-color: #caf0f8;
     padding:20px;
     display:flex;
     justify-content: space-around;
 }
+/* add media query for responsive nav-bar using a hamburger menu*/
 a{
     color:black;
 }
@@ -21,3 +24,68 @@ a:visted{
 a:hover{
     font-size: 1.25em;
 }
+.container-about-us, .container-work-seeker, .container-work-provider,.container-set-up{
+    padding:40px;
+    background-color: #48cae4 ;
+    margin:20px;
+    border-radius: 5px;
+    text-align: justify;
+}
+.slider-image{
+    padding: 100px;
+    text-align: center;
+}
+#login-work-seeker,#login-work-provider{
+    text-align: left;
+    padding:40px;
+}
+#login-btn{
+    background-color: #caf0f8;
+    border-radius: 5px;
+    height: 25px;
+    width: 150px;
+}
+#login-btn:hover{
+    background-color: black;
+    color:white;
+
+}
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+
+  #set-up-bus-but,#help-set-up-bus-but {
+    background-color: #caf0f8;
+    border-radius: 5px;
+    height: 100px;
+    width:100px;
+  }
+  #set-up-bus-but:hover{
+    background-color: black;
+    color:white;
+  }
+  #help-set-up-bus-but:hover{
+    background-color: black;
+    color:white;
+  }
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  footer{
+    padding:40px;
+    background-color: #48cae4 ;
+    text-align: justify;
+
+  }
