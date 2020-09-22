@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+header{
+    background-color: beige;
+    padding:20px;
+    
+}
+.nav-bar{
+    background-color: beige;
+    padding:20px;
+    display:flex;
+    justify-content: space-around;
+}
+a{
+    color:black;
+}
+a:visted{
+    color:black
+}
+a:hover{
+    font-size: 1.25em;
+}
