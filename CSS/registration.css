@@ -1,11 +1,11 @@
 body{
-    background-color: #caf0f8;
+    background-color: #1e1f26;
     color: black;
     margin:0;
 }
 
 header{
-    background-color: #48cae4;
+    background-color: #ffefd7;
     padding:20px;
 
 }
@@ -14,15 +14,15 @@ input[type=text],input[type=password],input[type=file], select {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid #1e1f26;
     border-radius: 4px;
     box-sizing: border-box;
   }
   
   input[type=submit] {
     width: 100%;
-    background-color: #caf0f8;
-    color: black;
+    background-color: #ffefd7;
+    color: #1e1f26;
     padding: 14px 20px;
     margin: 8px 0;
     border-radius: 4px;
@@ -30,14 +30,14 @@ input[type=text],input[type=password],input[type=file], select {
   }
   
   input[type=submit]:hover {
-    background-color: black;
-    color:white;
+    background-color: #1e1f26;
+    color:#ffefd7;
   }
   
 .form-container {
     border-radius: 5px;
     margin:20px;
     padding:40px;
-    background-color: #48cae4 ;
+    background-color: #ffefd7 ;
     
   }
