@@ -1,0 +1,158 @@
+
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+  }
+
+body{
+
+     background-color: #1e1f26;
+}
+
+.wrapper{
+    position: absolute;
+    padding:20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 80%;
+    display: flex;
+    box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
+}
+
+.wrapper .left{
+    width: 35%;
+    
+    padding: 30px 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    color: #1e1f26;
+    background-color:#ffefd7;
+}
+
+.wrapper .left img{
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.wrapper .left h2{
+    margin-bottom: 15px;
+}
+
+.wrapper .left p{
+font-size: 18px;
+}
+
+.wrapper .right{
+  width: 65%;
+  background: #fff;
+  padding: 30px 25px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.wrapper .right .info,
+.wrapper .right .job_details{
+  margin-bottom: 25px;
+}
+
+.wrapper .right .info h3,
+.wrapper .right .job_details h3{
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #e0e0e0;
+      color: #353c4e;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+}
+
+.wrapper .right .info_data,
+.wrapper .right .job_data{
+display: flex;
+justify-content: space-between;
+}
+
+.wrapper .right .info_data .data,
+.wrapper .right .job_data .data{
+width: 45%;
+}
+
+.wrapper .right .info_data .data h3,
+.wrapper .right .job_data .data h3{
+color: #353c4e;
+margin-bottom: 5px;
+}
+
+.wrapper .right .info_data .data p,
+.wrapper .right .job_data .data p{
+font-size: 18px;
+margin-bottom: 10px;
+color: #919aa3;
+}
+
+.wrapper {
+display: flex;
+}
+
+.wrapper .social_media ul li{
+width: 45px;
+height: 45px;
+background-color: #1e1f26;
+color:#ffefd7;
+margin-right: 10px;
+border-radius: 5px;
+text-align: center;
+line-height: 45px;
+}
+
+.wrapper .social_media ul li a{
+  background-color: #1e1f26;
+  color:#ffefd7;
+display: block;
+font-size: 18px;
+}
+  
+.wrapper .nav_bar ul li a{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 50px;
+  line-height: 50px;
+  background-color: #1e1f26;
+  color:#ffefd7;
+  font-family: 'Piazzolla', serif;
+  font-size: 15px;
+  float: right;
+  border-right: 0px;
+  display: block;
+  padding: 0 20px;
+  text-decoration: none;
+  
+}  
+
+
+#logout-btn{
+  background-color: #ffefd7 ;
+  border-radius: 5px;
+  height: 25px;
+  width: 150px;
+}
+#logout-btn:hover{
+background-color: #1e1f26;
+color:#ffefd7;
+
+}
+
+
+
+
+
+
+
+
+
+              
