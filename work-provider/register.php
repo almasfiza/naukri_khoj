@@ -14,7 +14,7 @@
     </header>
     <br></br>
     <div class="form-container">
-        <form action="">
+        <form action="../backend/reg-provider.php" method="POST">
             <label for="name">Company Name/ Individual Name</label>
             <input type="text" id="name" name="name" placeholder="Name" required>
         
@@ -32,20 +32,20 @@
 
             <!--JS code to confirm password-->
             <label for="work">Works available</label> <br>
-            <input type="checkbox" id="work" name="construction" value="construction">
+            <input type="checkbox" id="work" name="work" value="construction">
             <label for="construction"> Construction</label><br>
-            <input type="checkbox" id="waiter" name="waiter" value="waiter">
+            <input type="checkbox" id="waiter" name="work" value="waiter">
             <label for="waiter"> Waiter</label><br>
-            <input type="checkbox" id="driver" name="driver" value="driver">
+            <input type="checkbox" id="driver" name="work" value="driver">
             <label for="driver"> Driver</label><br>
-            <input type="checkbox" id="domestic" name="domestic" value="domestic">
+            <input type="checkbox" id="domestic" name="work" value="domestic">
             <label for="domestic"> Domestic</label><br>
-            <input type="checkbox" id="security" name="security" value="security">
+            <input type="checkbox" id="security" name="work" value="security">
             <label for="security"> Security</label><br>
 
 
 
-            <input type="submit" value="Register" >
+            <input type="submit" value="Register" name="submit">
 
 
 
