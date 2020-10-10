@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="../scripts/password.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../CSS/registration.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,18 +20,29 @@
             <input type="text" id="ph-no" name="ph-no" placeholder="Phone-no:" required>
 
             <label for="city">City</label>
-            <input type="text" name="city" id="city" placeholder="City">
+            <input type="text" name="city" id="city" placeholder="City" required>
 
             <label for="pwd">Set password</label>
             <input type="password" name="pwd" id="pwd" placeholder="" required>
 
+            <br></br>
+            <progress id='progress-bar' value = '0' max ='100'></progress>
+            <input type="button"  value="Check Strength!" id="check-button" onClick= testPass()>
+            <br></br>
+
             <label for="confirm-pwd">Confirm password</label>
             <input type="password" name="confirm-pwd" id="confirm-pwd" placeholder="" required>
 
-
-            <!-- JS code to confirm password.-->
+            <br>
+            <strong><text id = "confirm-pass-msg"></text></strong>
+            <input type="button"  value="Check" id="check-button" onClick= checkPass()>
+        
+            </br>
+            
+           
+            
             <label for="adhar">Adhar Card</label>
-            <input type="file" name="adhar" value="adhar" id="adhar">
+            <input type="file" name="adhar" value="adhar" id="adhar" required>
 
             <label for="ration">Ration Card</label>
             <input type="file" name="ration" value="ration" id="ration">
@@ -60,8 +72,6 @@
           </form>
 
     </div>
-    
-    
 
  
     

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="../scripts/password.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/registration.css">
     <meta charset="UTF-8">
@@ -27,8 +28,21 @@
             <label for="pwd">Set password</label>
             <input type="password" name="pwd" id="pwd" placeholder="" required>
 
+            <br></br>
+            <progress id='progress-bar' value = '0' max ='100'></progress>
+            <input type="button"  value="Check Strength!" id="check-button" onClick= testPass()>
+            <br></br>
+
             <label for="confirm-pwd">Confirm password</label>
             <input type="password" name="confirm-pwd" id="confirm-pwd" placeholder="" required>
+
+            <br>
+            <strong><text id = "confirm-pass-msg"></text></strong>
+            <input type="button"  value="Check" id="check-button" onClick= checkPass()>
+        
+            </br>
+
+            
 
             <!--JS code to confirm password-->
             <label for="work">Works available</label> <br>

@@ -19,7 +19,7 @@ input[type=text],input[type=password],input[type=file],input[type=email],select 
     box-sizing: border-box;
   }
   
-  input[type=submit] {
+  input[type=submit],input[type=button] {
     width: 100%;
     background-color: #ffefd7;
     color: #1e1f26;
@@ -33,6 +33,12 @@ input[type=text],input[type=password],input[type=file],input[type=email],select 
     background-color: #1e1f26;
     color:#ffefd7;
   }
+  input[type=button]:hover{
+    background-color: #1e1f26;
+    color:#ffefd7;
+
+
+  }
   
 .form-container {
     border-radius: 5px;
@@ -41,4 +47,4 @@ input[type=text],input[type=password],input[type=file],input[type=email],select 
     background-color: #ffefd7 ;
     
   }
-  
+ 
