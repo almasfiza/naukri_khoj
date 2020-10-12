@@ -72,12 +72,33 @@ a:hover{
     width:100px;
   }
   #set-up-bus-but:hover{
-    background-color: #1e1f26;
-    color:#ffefd7;
+    animation-name: bounce;
+			animation-duration: 2s;
+			animation-iteration-count: 1;
   }
   #help-set-up-bus-but:hover{
-    background-color: black;
-    color:#ffefd7;
+    animation-name: bounce;
+			animation-duration: 2s;
+			animation-iteration-count: 1;
+  }
+  
+
+
+
+
+  @keyframes bounce {
+    from{
+      transform: translateX(0%);
+    }
+    to{
+      transform: translateX(20%);
+      border-radius:50%;
+      background-color: #1e1f26;
+      color:#ffefd7;
+      
+    }
+    
+    
   }
   @media screen and (max-width: 600px) {
     .column {
@@ -120,7 +141,7 @@ a:hover{
   }
   
   .slide-img {
-    filter: brightness(50%);
+    filter: brightness(100%);
     height: 100%;
     object-fit: fill;
     display: block;
@@ -131,15 +152,6 @@ a:hover{
     height: 100%;
     position: relative;
     margin: 0;
-  }
-  
-  .slide-caption {
-    position: absolute;
-    bottom: 30%;
-    width: calc(100% - 1rem);
-    color: white;
-    text-align: center;
-    left: 50%;
   }
   
   .trigger:checked + .slide {
@@ -211,10 +223,14 @@ a:hover{
 
   @media only screen and (max-width: 768px) {
     .slider, .slider-wrapper {
-      height: 200px;
+      height: 150px;
       width: 200px;
       position: relative;
       left:-40px;
+    }
+    .img{
+      height: 200px;
+      width:200px;
     }
   
     .slide-img {
