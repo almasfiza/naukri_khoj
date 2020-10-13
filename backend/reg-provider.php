@@ -5,7 +5,7 @@ $con=mysqli_connect('localhost','root','');
 if(!$con){
 	echo "No DB connection";
 }
-//varibales to take input from form 
+//variables to take input from form 
 $name = $_POST['name'];
 $phoneno = $_POST['ph-no'];
 $city = $_POST['city'];
