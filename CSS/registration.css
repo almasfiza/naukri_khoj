@@ -18,6 +18,15 @@ input[type=text],input[type=password],input[type=file],input[type=email],select 
     border-radius: 4px;
     box-sizing: border-box;
   }
+  input[type=text-area]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    
+    border: 1px solid #1e1f26;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
   
   input[type=submit],input[type=button] {
     width: 100%;
