@@ -25,6 +25,11 @@
             <input type="submit" value="Ask Help" name="ask-help">
            </form>
             
+           <p>Click the button to get your coordinates and save your location.</p>
+    
+    <button onclick="getLocation();">Save my location!</button>
+    
+    <p id="demo"></p>
 
 
 
@@ -32,4 +37,27 @@
     </div>
     
 </body>
+
+
+    
+    
+    <script>
+    var x = document.getElementById("demo");
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+         
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function showPosition(position){
+        x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude +"<br> This data will be stored for your location purposes.";
+    }
+    
+    </script>
+    
+  
 </html>

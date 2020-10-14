@@ -27,6 +27,15 @@ input[type=text],input[type=password],input[type=file],input[type=email],select 
     border-radius: 4px;
     box-sizing: border-box;
   }
+  button{
+    width: 100%;
+    background-color: #ffefd7;
+    color: #1e1f26;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+  }
   
   input[type=submit],input[type=button] {
     width: 100%;
