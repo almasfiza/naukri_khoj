@@ -15,13 +15,13 @@ $work = 'test val';
 
 
 //selection of database where the input data will be stored
-mysqli_select_db($con,'naukri-khoj');
+mysqli_select_db($con,'backend');
 
 
 // Attempt insert query execution
 if(isset($_POST['submit'])){
 
-$reg= "insert into register-provider(Name, Phone-no,City, SetPass, ConfirmPass, Work ) 
+$reg= "insert into regProvider(name, phone, city, setP, confP, work ) 
                                 values ('$name', '$phoneno','$city','$setPass',
                                 '$conPass', '$work')";
 $result=mysqli_query($con,$reg);

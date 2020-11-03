@@ -30,7 +30,7 @@
         
     </div>
     <!--ABOUT US SECTION-->
-    <div id="about-us" class="container-about-us">
+    <section id="about-us" class="container-about-us">
         <h3>About Naukri Khoj</h3>
         <p>The current COVID19 situation has left many people unemployed and looking for jobs and incomes. The pandemic has hit low wage workers
             more drastically. The project aims at providing job opportunities for the
@@ -92,10 +92,15 @@
               </div><!-- .slider-wrapper -->
               
         </div>
+        <div id="video-sec">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cxxiXjEzLlw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/AebX789aMNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
-    </div>
+
+    </section>
     <!--WORK SEEKER SECTION-->
-    <div id="work-seeker" class="container-work-seeker">
+    <section id="work-seeker" class="container-work-seeker">
         <h3>Are you a work seeker?</h3>
              
         <p>Our target audience is the Low Wage Workforce- applying for jobs
@@ -118,16 +123,16 @@
         </form>
 
 
-    </div>
+    </section>
     <!--WORK PROVIDER SECTION-->
-    <div id="work-provider" class="container-work-provider">
+    <section id="work-provider" class="container-work-provider">
         <h3>Are you a work provider?</h3>
              
         <p>Help the low wage workforce by posting job openings. Enter your name, or the company name to log in.
             Haven't registered yet? <a href="../work-provider/register.html">Register here.</a> 
         </p>
 
-        <form action="../work-provider/profile.html" id="login-work-provider">
+        <form action="../backend/checkPassProvider.php" method="POST" id="login-work-provider">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name">
             <br></br>
@@ -136,9 +141,9 @@
             <br></br>
             <a href="../forgotPass.html">Forgot password?</a>
             <br></br>
-            <input type="submit" name="login" id="login-btn" value="Log In">
+            <input type="submit" name="login" id="login-btn" value="Log In" >
         </form>
-    </div>
+    </section>
     <!-- SET UP A SMALL BUSINESS -->
     <div id="incubation" class="container-set-up">
         <h3>We can help you set a small business too!</h3>
@@ -163,8 +168,20 @@
     <footer id="contact-us">
         Contact: ----------
         <br></br>
-        Address: --------------
-        ------
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.8915502615405!2d72.8536084149074!3d19.243557651684846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b13affffffff%3A0xfd071f1d3a7844ef!2sSt.%20Francis%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1602675310782!5m2!1sen!2sin" width="200" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+           
+        </iframe>
+        <br>
+        We are located at
+    
     </footer>
+    <script type = "text/javascript" src="https://gistlangserver.in/content/wsltoolbar/scripts/gotranslateweblocalizer/latest/static/gotwl.min.js"></script>
+
+    <script type = "text/javascript">
+    window.onload = function(){
+        showSnippetBar();
+    }
+    </script>
 </body>
 </html>

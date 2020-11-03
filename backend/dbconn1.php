@@ -18,13 +18,13 @@ $work = $_POST['work'];
 $extra = $_POST['ex-work']; 
 
 //selection of database where the input data will be stored
-mysqli_select_db($con,'naukri-khoj');
+mysqli_select_db($con,'backend');
 
 
 // Attempt insert query execution
 if(isset($_POST['submit'])){
 
-$reg= "insert into register-seeker(Name, Phone-no,City, SetPass, Con, Adhar,Ration, Photo, Work, extra) 
+$reg= "insert into regSeeker(name, phone,city, setP, confP,adhar,ration, photo,work, extraWork) 
                                 values ('$name', '$phoneno','$city','$setPass',
                                 '$conPass','$adhar','$ration','$photo',
                                 $work','$extra')";
