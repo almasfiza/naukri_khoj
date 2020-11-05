@@ -8,6 +8,7 @@
 
 	$sql = "SELECT name FROM regProvider where name = '$username' and setP = '$password'";
 
+
 	if($result = $conn->query($sql)){
 		if($result->num_rows == 1){
 			echo "Login Success";

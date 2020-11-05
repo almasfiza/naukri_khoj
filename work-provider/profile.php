@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-      <title>Job Provider Profile</title>
+      <title>Job Seeker Profile</title>
       <link rel="stylesheet" href="../CSS/profile.css">
       <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 <body>
 <div class="wrapper">
    <div class="left">
-      <img src="../Assets/img2.png" alt="user" width="100">
-      <h2>Job Provider Name</h2>
-      <p>Works available</p>
+      <img src="../Assets/img1.png" alt="user" width="100">
+      <h2>Job Seeker Name</h2>
+      <p>Profession</p>
     </div>
     <div class="right">
       <div class="info">
@@ -32,7 +32,7 @@
         <div class="job_data">
           <div class="data">
             <h3>Recent</h3>
-            <p>Details about job posted</p>
+            <p>Details about job pursued</p>
           </div>
         </div>    
       </div>
@@ -61,4 +61,3 @@
 
                 
 
-                     

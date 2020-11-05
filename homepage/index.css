@@ -73,13 +73,13 @@ a:hover{
   }
   #set-up-bus-but:hover{
     animation-name: bounce;
-			animation-duration: 2s;
-			animation-iteration-count: 1;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
   }
   #help-set-up-bus-but:hover{
     animation-name: bounce;
-			animation-duration: 2s;
-			animation-iteration-count: 1;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
   }
   
 
@@ -91,7 +91,7 @@ a:hover{
       transform: translateX(0%);
     }
     to{
-      transform: translateX(20%);
+      transform: translateX(50%);
       border-radius:50%;
       background-color: #1e1f26;
       color:#ffefd7;
@@ -105,9 +105,9 @@ a:hover{
    
     height:100px;
     width:100px;
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
+    -webkit-animation:spin 4s ease-in-out infinite;
+    -moz-animation:spin 4s ease-in-out infinite;
+    animation:spin 4s ease-in-out infinite;
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
@@ -250,4 +250,21 @@ a:hover{
       height: auto;
      
     }
+  }
+  .video-sec{
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  /*videos responsiveness*/
+  @media only screen and (max-width: 768px) {
+    iframe{
+      height:200px;
+      width:250px;
+      padding:0px;
+    }
+  }
+  iframe{
+    padding:10px;
   }
