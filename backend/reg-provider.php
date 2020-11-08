@@ -11,7 +11,7 @@ $phoneno = $_POST['ph-no'];
 $city = $_POST['city'];
 $setPass = $_POST['pwd'];
 $conPass = $_POST['confirm-pwd'];
-$work = 'test val';
+$work = $_POST['work'];
 
 
 //selection of database where the input data will be stored

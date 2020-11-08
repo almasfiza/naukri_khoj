@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -132,6 +133,8 @@
             Haven't registered yet? <a href="../work-provider/register.html">Register here.</a> 
         </p>
 
+
+        <?php if(!isset($_SESSION['username'])) { ?>}
         <form action="../backend/checkPassProvider.php" method="POST" id="login-work-provider">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name">
@@ -143,6 +146,21 @@
             <br></br>
             <input type="submit" name="login" id="login-btn" value="Log In" >
         </form>
+            <?php  if(isset($_GET["feedback"])){
+            echo $_GET["feedback"];
+        }}
+            ?>
+
+
+       
+        <?php if(isset($_SESSION['username']))
+{
+    echo "<script>window.location.assign('../work-provider/profile.php')</script>";
+  ?>
+<?php 
+      }
+      ?>
+        
     </section>
     <!-- SET UP A SMALL BUSINESS -->
     <div id="incubation" class="container-set-up">

@@ -1,3 +1,11 @@
+<?php
+session_start();
+require("../backend/functions.php");
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,10 +14,14 @@
       <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 <body>
+<?php if(isset($_SESSION['name']))
+{
+  $usersData = getUsersData(getId($_SESSION['name']));
+?>
 <div class="wrapper">
    <div class="left">
       <img src="../Assets/img1.png" alt="user" width="100">
-      <h2>Job Seeker Name</h2>
+      <h2><?php echo $usersData['name'];?></h2>
       <p>Profession</p>
     </div>
     <div class="right">
@@ -36,25 +48,30 @@
           </div>
         </div>    
       </div>
+
+     
                       
       
                       
       
 
       <div class="nav_bar" id="logout-btn">
-        <a href="../homepage/index.html">
+        <a href="../homepage/index.php">
           <input type="submit" name="logout" id="logout-btn" value="Log Out">
         </a>
         
       </div>
 
+      
                       
 
 
   </div>
                  
 </div>
-
+<?php 
+      }
+      ?>
 
 </body>  
 </html>      
