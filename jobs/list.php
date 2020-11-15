@@ -42,6 +42,7 @@ include 'database.php';
 							</span>
 						</th>
 						<th>SL NO</th>
+						<th>JOB</th>
                         <th>NAME</th>
                         <th>EMAIL</th>
 						<th>PHONE</th>
@@ -64,6 +65,7 @@ include 'database.php';
 							</span>
 						</td>
 					<td><?php echo $i; ?></td>
+					<td><?php echo $row["job"]; ?></td>
 					<td><?php echo $row["name"]; ?></td>
 					<td><?php echo $row["email"]; ?></td>
 					<td><?php echo $row["phone"]; ?></td>
@@ -72,6 +74,7 @@ include 'database.php';
 						<a href="#editEmployeeModal" class="edit" data-toggle="modal">
 							<i class="material-icons update" data-toggle="tooltip" 
 							data-id="<?php echo $row["id"]; ?>"
+							data-id="<?php echo $row["job"]; ?>"
 							data-name="<?php echo $row["name"]; ?>"
 							data-email="<?php echo $row["email"]; ?>"
 							data-phone="<?php echo $row["phone"]; ?>"
@@ -100,7 +103,11 @@ include 'database.php';
 						<h4 class="modal-title">Add User</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					</div>
-					<div class="modal-body">					
+					<div class="modal-body">	
+					<div class="form-group">
+							<label>JOB</label>
+							<input type="text"  name="job" class="form-control" required>
+						</div>				
 						<div class="form-group">
 							<label>NAME</label>
 							<input type="text"  name="name" class="form-control" required>
@@ -138,7 +145,11 @@ include 'database.php';
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					</div>
 					<div class="modal-body">
-						<input type="hidden" id="id_u" name="id" class="form-control" required>					
+						<input type="hidden" id="id_u" name="id" class="form-control" required>		
+						<div class="form-group">
+							<label>Job</label>
+							<input type="text" id="name_u" name="job" class="form-control" required>
+						</div>			
 						<div class="form-group">
 							<label>Name</label>
 							<input type="text" id="name_u" name="name" class="form-control" required>

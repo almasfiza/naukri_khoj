@@ -2,12 +2,13 @@
 include 'database.php';
 if(count($_POST)>0){
 	if($_POST['type']==1){
+		$job=$_POST['job'];
 		$name=$_POST['name'];
 		$email=$_POST['email'];
 		$phone=$_POST['phone'];
 		$city=$_POST['city'];
-		$sql = "INSERT INTO `jobs`( `name`, `email`,`phone`,`city`) 
-		VALUES ('$name','$email','$phone','$city')";
+		$sql = "INSERT INTO `jobs`(`job`, `name`, `email`,`phone`,`city`) 
+		VALUES ('$job','$name','$email','$phone','$city')";
 		if (mysqli_query($conn, $sql)) {
 			echo json_encode(array("statusCode"=>200));
 		} 
@@ -20,11 +21,12 @@ if(count($_POST)>0){
 if(count($_POST)>0){
     if($_POST['type']==2){
 		$id=$_POST['id'];
+		$job=$_POST['job'];
 		$name=$_POST['name'];
 		$email=$_POST['email'];
 		$phone=$_POST['phone'];
 		$city=$_POST['city'];
-		$sql = "UPDATE `jobs` SET `name`='$name',`email`='$email',`phone`='$phone',`city`='$city' WHERE id=$id";
+		$sql = "UPDATE `jobs` SET `job`='$job', `name`='$name',`email`='$email',`phone`='$phone',`city`='$city' WHERE id=$id";
 		if (mysqli_query($conn, $sql)) {
 			echo json_encode(array("statusCode"=>200));
 		} 

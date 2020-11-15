@@ -107,10 +107,12 @@
         <p>Our target audience is the Low Wage Workforce- applying for jobs
             Construction Companies, Restaurant chains, Factories, Business in
             general, requiring workforce, Domestic help,laundry service,
-            watchman etcetera. Haven't registered yet? <a href="../work-seeker/register.html">Register here.</a>
+            watchman etcetera.
         </p>
+        <a href="../jobs/list.php"><button>Click here to view jobs listed</button></a>
+        <button>Click here to view jobs listed</button>
 
-        <form action="../work-seeker/profile.html" id="login-work-seeker">
+       <!--  <form action="../work-seeker/profile.html" id="login-work-seeker">
             <label for="phone-no">Phone no:</label>
             <input type="number" name="phone-no" id="phone-no">
             <br></br>
@@ -121,7 +123,7 @@
             <br></br>
             <input type="submit" name="login" id="login-btn" value="Log In">
             
-        </form>
+        </form> -->
 
 
     </section>
@@ -134,8 +136,8 @@
         </p>
 
 
-        <?php if(!isset($_SESSION['username'])) { ?>}
-        <form action="../backend/checkPassProvider.php" method="POST" id="login-work-provider">
+        <?php if(!isset($_SESSION['username'])) { ?>
+        <form action="../jobs/checkPassProvider.php" method="POST" id="login-work-provider">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name">
             <br></br>
@@ -162,26 +164,7 @@
       ?>
         
     </section>
-    <!-- SET UP A SMALL BUSINESS -->
-    <div id="incubation" class="container-set-up">
-        <h3>We can help you set a small business too!</h3>
-        <div class="row">
-            <div class="column">Are you looking for financial aid to set up a small business?
-                <br>Like a food stall or vendor's stall? 
-                <br></br>
-                <a href="../help/seeker.html"><input type="submit" name="set-up" id="set-up-bus-but" value="Help me!" ></a>
-                
-            </div>
-            <div class="column">Provide money to local businesses which need financial aid. Help the low wage workforce become
-                financially independent.
-                <br></br>
-                <a href="../help/helpPage.html"><input type="submit" name="set-up" id="help-set-up-bus-but" value="I can help!"></a>
-                
-            </div>
-
-        </div>
-
-    </div>
+   
     <!--CONTACT US SECTION-->
     <footer id="contact-us">
         Contact: ----------

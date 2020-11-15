@@ -2,6 +2,10 @@
 <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	body.modal-open div.modal-backdrop { z-index: 0; }
+
+</style>
 <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -42,9 +46,9 @@
 
 <div class="wrapper">
    <div class="left">
-      <img src="../Assets/img1.png" alt="user" width="100">
+      
       <h2><?php echo $usersData['name'];?></h2>
-      <p>Profession</p>
+      
     </div>
     <div class="right">
       <div class="info">
@@ -89,13 +93,13 @@
 
    <!-- Listing the job -->
 
-   <div class="container">
+   <div class="container" style="overflow-x:auto;">
 	<p id="success"></p>
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Manage <b>Users</b></h2>
+						<h2>Jobs Listed</b></h2>
 					</div>
 					<div class="col-sm-6">
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons"></i> <span>Add New User</span></a>
@@ -113,6 +117,7 @@
 							</span>
 						</th>
 						<th>SL NO</th>
+						<th>JOB</th>
                         <th>NAME</th>
                         <th>EMAIL</th>
 						<th>PHONE</th>
@@ -136,6 +141,7 @@
 							</span>
 						</td>
 					<td><?php echo $i; ?></td>
+					<td><?php echo $row["job"]; ?></td>
 					<td><?php echo $row["name"]; ?></td>
 					<td><?php echo $row["email"]; ?></td>
 					<td><?php echo $row["phone"]; ?></td>
@@ -144,6 +150,7 @@
 						<a href="#editEmployeeModal" class="edit" data-toggle="modal">
 							<i class="material-icons update" data-toggle="tooltip" 
 							data-id="<?php echo $row["id"]; ?>"
+							data-name="<?php echo $row["job"]; ?>"
 							data-name="<?php echo $row["name"]; ?>"
 							data-email="<?php echo $row["email"]; ?>"
 							data-phone="<?php echo $row["phone"]; ?>"
@@ -164,15 +171,19 @@
         </div>
     </div>
 	<!-- Add Modal HTML -->
-	<div id="addEmployeeModal" class="modal fade">
+	<div id="addEmployeeModal" class="modal fade" data-backdrop="false">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form id="user_form" method="POST" action="../jobs/save.php">
+				<form id="user_form" method="POST" action="save.php">
 					<div class="modal-header">						
 						<h4 class="modal-title">Add User</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					</div>
-					<div class="modal-body">					
+					<div class="modal-body">		
+					<div class="form-group">
+							<label>JOB</label>
+							<input type="text"  name="job" class="form-control" required>
+						</div>			
 						<div class="form-group">
 							<label>NAME</label>
 							<input type="text"  name="name" class="form-control" required>
@@ -201,16 +212,20 @@
 		</div>
 	</div>
 	<!-- Edit Modal HTML -->
-	<div id="editEmployeeModal" class="modal fade">
+	<div id="editEmployeeModal" class="modal fade" data-backdrop="false">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form id="update_form" method="POST" action="../jobs/save.php">
+				<form id="update_form" method="POST" action="save.php">
 					<div class="modal-header">						
 						<h4 class="modal-title">Edit User</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					</div>
 					<div class="modal-body">
-						<input type="hidden" id="id_u" name="id" class="form-control" required>					
+						<input type="hidden" id="id_u" name="id" class="form-control" required>	
+						<div class="form-group">
+							<label>Job</label>
+							<input type="text" id="name_u" name="job" class="form-control" required>
+						</div>				
 						<div class="form-group">
 							<label>Name</label>
 							<input type="text" id="name_u" name="name" class="form-control" required>
@@ -238,10 +253,10 @@
 		</div>
 	</div>
 	<!-- Delete Modal HTML -->
-	<div id="deleteEmployeeModal" class="modal fade">
+	<div id="deleteEmployeeModal" class="modal fade" data-backdrop="false">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form action="../jobs/save.php" method="POST" >
+				<form action="save.php" method="POST" >
 						
 					<div class="modal-header">						
 						<h4 class="modal-title">Delete User</h4>
