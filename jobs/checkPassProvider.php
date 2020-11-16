@@ -103,7 +103,7 @@
 					</div>
 					<div class="col-sm-6">
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons"></i> <span>Add New User</span></a>
-						<a href="JavaScript:void(0);" class="btn btn-danger" id="delete_multiple"><i class="material-icons"></i> <span>Delete</span></a>						
+												
 					</div>
                 </div>
             </div>
@@ -111,10 +111,7 @@
                 <thead>
                     <tr>
 						<th>
-							<span class="custom-checkbox">
-								<input type="checkbox" id="selectAll">
-								<label for="selectAll"></label>
-							</span>
+							
 						</th>
 						<th>SL NO</th>
 						<th>JOB</th>
@@ -135,10 +132,7 @@
 				?>
 				<tr id="<?php echo $row["id"]; ?>">
 				<td>
-							<span class="custom-checkbox">
-								<input type="checkbox" class="user_checkbox" data-user-id="<?php echo $row["id"]; ?>">
-								<label for="checkbox2"></label>
-							</span>
+							
 						</td>
 					<td><?php echo $i; ?></td>
 					<td><?php echo $row["job"]; ?></td>
