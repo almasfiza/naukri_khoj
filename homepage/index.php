@@ -107,12 +107,12 @@
         <p>Our target audience is the Low Wage Workforce- applying for jobs
             Construction Companies, Restaurant chains, Factories, Business in
             general, requiring workforce, Domestic help,laundry service,
-            watchman etcetera.
+            watchman etcetera. Haven't registered yet? <a href="../work-seeker/register.html">Register here.</a>
         </p>
         <a href="../jobs/list.php"><button>Click here to view jobs listed</button></a>
         <button>Click here to view jobs listed</button>
 
-       <!--  <form action="../work-seeker/profile.html" id="login-work-seeker">
+        <form action="../work-seeker/profile.html" id="login-work-seeker">
             <label for="phone-no">Phone no:</label>
             <input type="number" name="phone-no" id="phone-no">
             <br></br>
@@ -123,7 +123,7 @@
             <br></br>
             <input type="submit" name="login" id="login-btn" value="Log In">
             
-        </form> -->
+        </form>
 
 
     </section>

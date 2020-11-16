@@ -20,26 +20,26 @@ include 'database.php';
 <body>
 <div class="container">
 	<p id="success"></p>
-        <div class="table-wrapper">
+        <div class="table-wrapper" style="overflow-x:auto;">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Manage <b>Users</b></h2>
+						<h2>Find <b>Work</b></h2>
 					</div>
-					<div class="col-sm-6">
+					<!-- <div class="col-sm-6">
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons"></i> <span>Add New User</span></a>
 						<a href="JavaScript:void(0);" class="btn btn-danger" id="delete_multiple"><i class="material-icons"></i> <span>Delete</span></a>						
-					</div>
+					</div> -->
                 </div>
             </div>
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
 						<th>
-							<span class="custom-checkbox">
+							<!-- <span class="custom-checkbox">
 								<input type="checkbox" id="selectAll">
 								<label for="selectAll"></label>
-							</span>
+							</span> -->
 						</th>
 						<th>SL NO</th>
 						<th>JOB</th>
@@ -59,10 +59,10 @@ include 'database.php';
 				?>
 				<tr id="<?php echo $row["id"]; ?>">
 				<td>
-							<span class="custom-checkbox">
+							<!-- <span class="custom-checkbox">
 								<input type="checkbox" class="user_checkbox" data-user-id="<?php echo $row["id"]; ?>">
 								<label for="checkbox2"></label>
-							</span>
+							</span> -->
 						</td>
 					<td><?php echo $i; ?></td>
 					<td><?php echo $row["job"]; ?></td>
@@ -134,7 +134,12 @@ include 'database.php';
 				</form>
 			</div>
 		</div>
-	</div>
+			</div>
+
+
+
+
+
 	<!-- Edit Modal HTML -->
 	<div id="editEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
@@ -159,7 +164,7 @@ include 'database.php';
 							<input type="email" id="email_u" name="email" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label>PHONE</label>
+							<label>Phone</label>
 							<input type="phone" id="phone_u" name="phone" class="form-control" required>
 						</div>
 						<div class="form-group">
