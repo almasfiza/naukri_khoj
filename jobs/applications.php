@@ -1,6 +1,5 @@
 <head><link rel="stylesheet" href="../CSS/table.css"></head>
 <?php
-session_start();
 $var_value = $_SESSION['name'];
 //database connection
 $con=mysqli_connect('localhost','root','');
@@ -12,32 +11,9 @@ mysqli_select_db($con,'backend');
 $providerName = $_GET['provName'];
 $job= $_GET['job'];
 
-require("../backend/functions.php");
-	$con = new mysqli("localhost","root","","backend");
-	if(!$con){
-		echo $conn->connect_error;		
-  }
-
-
   
-
-
-
-	
-
-	$sql = "SELECT name FROM regProvider where name = '$providerName'";
-
-
-	if($result = $con->query($sql)){
-		if($result->num_rows == 1){
-			
-			$_SESSION['name'] = $providerName;
-			if(isset($_SESSION['name']))
-			{
-			  $usersData = getUsersData(getId($_SESSION['name']));
-			  ?>
-
 ?>
+
 
 <div class="container" style="overflow-x:auto;">
 	<p id="success"></p>
@@ -91,16 +67,9 @@ require("../backend/functions.php");
 			</table>
 			
         </div>
-        <a href="checkPassProvider.php"><button>Back</button></a>
+		<a href="checkPassProvider.php"> <button>Back</button></a>
+		
+       
 </div>
 		
-<?php
-		}	
-	}
-		else{
-			echo "No User Found";
-		}
-	}
-	
 
-?>
