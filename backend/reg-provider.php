@@ -25,7 +25,10 @@ $reg= "insert into regProvider(name, phone, city, setP, confP, work )
                                 values ('$name', '$phoneno','$city','$setPass',
                                 '$conPass', '$work')";
 $result=mysqli_query($con,$reg);
-echo "Registration is successful";
+?>
+
+<script>window.location = '../filler/SuccessReg.html'</script>;
+<?php
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
 }
