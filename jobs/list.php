@@ -8,6 +8,7 @@ include 'database.php';
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>User Data</title>
+	<link rel="stylesheet" href="../CSS/table.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,7 +33,7 @@ include 'database.php';
 					</div> -->
                 </div>
             </div>
-            <table class="table table-striped table-hover">
+            <table class="content-table">
                 <thead>
                     <tr>
 						<th>
@@ -71,18 +72,10 @@ include 'database.php';
 					<td><?php echo $row["phone"]; ?></td>
 					<td><?php echo $row["city"]; ?></td>
 					<td>
-						<a href="#editEmployeeModal" class="edit" data-toggle="modal">
-							<i class="material-icons update" data-toggle="tooltip" 
-							data-id="<?php echo $row["id"]; ?>"
-							data-id="<?php echo $row["job"]; ?>"
-							data-name="<?php echo $row["name"]; ?>"
-							data-email="<?php echo $row["email"]; ?>"
-							data-phone="<?php echo $row["phone"]; ?>"
-							data-city="<?php echo $row["city"]; ?>"
-							title="Edit"></i>
+						<a href="#addEmployeeModal" class="edit" data-toggle="modal">
+							<button>Apply</button>
 						</a>
-						<a href="#deleteEmployeeModal" class="delete" data-id="<?php echo $row["id"]; ?>" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" 
-						 title="Delete"></i></a>
+						
                     </td>
 				</tr>
 				<?php
@@ -105,28 +98,28 @@ include 'database.php';
 					</div>
 					<div class="modal-body">	
 					<div class="form-group">
-							<label>JOB</label>
+							<label>Work</label>
 							<input type="text"  name="job" class="form-control" required>
 						</div>				
 						<div class="form-group">
-							<label>NAME</label>
-							<input type="text"  name="name" class="form-control" required>
+							<label>Provider Name</label>
+							<input type="text"  name="providerName" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label>EMAIL</label>
-							<input type="email"  name="email" class="form-control" required>
+							<label>Your Name</label>
+							<input type="email"  name="seekerName" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label>PHONE</label>
-							<input type="phone"  name="phone" class="form-control" required>
+							<label>Your No.</label>
+							<input type="phone"  name="seekerNo" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label>CITY</label>
-							<input type="city"  name="city" class="form-control" required>
+							<label>Your City</label>
+							<input type="city"  name="seekerCity" class="form-control" required>
 						</div>					
 					</div>
 					<div class="modal-footer">
-					    <input type="hidden" value="1" name="type">
+					    <input type="hidden" value="7" name="type">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
                         <button type="button" class="btn btn-success" id="btn-add">Add</button>
                        
@@ -181,31 +174,7 @@ include 'database.php';
 			</div>
 		</div>
 	</div>
-	<!-- Delete Modal HTML -->
-	<div id="deleteEmployeeModal" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form action="save.php" method="POST" >
-						
-					<div class="modal-header">						
-						<h4 class="modal-title">Delete User</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    </div>
-                 
-					<div class="modal-body">
-						<input type="hidden" id="id_d" name="id" class="form-control">					
-						<p>Are you sure you want to delete these Records?</p>
-						<p class="text-warning"><small>This action cannot be undone.</small></p>
-					</div>
-					<div class="modal-footer">
-                    <input type="hidden" value="4" name="type">
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<button type="button" class="btn btn-danger" id="delete">Delete</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+	
 
 </body>
 </html>    

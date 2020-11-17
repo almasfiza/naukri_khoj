@@ -18,6 +18,25 @@ if(count($_POST)>0){
 		mysqli_close($conn);
 	}
 }
+
+if(count($_POST)>0){
+	if($_POST['type']==7){
+		$job=$_POST['job'];
+		$providerName=$_POST['providerName'];
+		$seekerName=$_POST['seekerName'];
+		$seekerNo=$_POST['seekerNo'];
+		$seekerCity=$_POST['seekerCity'];
+		$sql = "INSERT INTO `application`(`job`, `providerName`, `seekerName`,`seekerNo`,`seekerCity`) 
+		VALUES ('$job','$providerName','$seekerName','$seekerNo','$seekerCity')";
+		if (mysqli_query($conn, $sql)) {
+			echo json_encode(array("statusCode"=>200));
+		} 
+		else {
+			echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+		}
+		mysqli_close($conn);
+	}
+}
 if(count($_POST)>0){
     if($_POST['type']==2){
 		$id=$_POST['id'];
