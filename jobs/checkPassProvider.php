@@ -16,6 +16,18 @@
 		
 
 	}
+	#our-btn{
+		border:solid black 2px;
+		color:black;
+		background-color:#ffefd7;
+		padding:5px;
+
+	}
+	#our-btn:hover{
+		background-color:black;
+		color:#ffefd7;
+
+	}
 
 </style>
 <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
@@ -58,7 +70,7 @@
 
   <header>
   <h1>Hello <?php echo $username ?></h1>
-  <a href="../homepage/index.php"><button>Logout</button></a>
+  <a href="../homepage/index.php"><button id="our-btn">Logout</button></a>
   </header>
   <!-- Listing the job -->
   
@@ -71,7 +83,7 @@
 						<h2>Work Listed</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="#addEmployeeModal" data-toggle="modal"><button>Add Work</button></a>
+						<a href="#addEmployeeModal" data-toggle="modal"><button id="our-btn">Add Work</button></a>
 												
 					</div>
                 </div>
@@ -122,7 +134,7 @@
 						</a>
 						<a href="#deleteEmployeeModal" class="delete" data-id="<?php echo $row["id"]; ?>" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" 
 						 title="Delete"></i></a>
-						<a href="applications.php?provName=<?php echo $row["name"]; ?>&job=<?php echo $row["job"]; ?>"><button>View Applications</button></a>
+						
                     </td>
 				</tr>
 				<?php

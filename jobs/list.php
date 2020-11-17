@@ -9,6 +9,8 @@ include 'database.php';
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>User Data</title>
 	<link rel="stylesheet" href="../CSS/table.css">
+
+	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,31 +19,100 @@ include 'database.php';
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="ajax.js"></script>
+	<script>
+
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function myFunction2() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput2");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+
+   </script>
+
+	<style>
+	header{
+		background-color:#ffefd7;
+		padding:30px;
+		margin:0px;
+		border: solid black 2px;
+	}
+	#our-btn{
+		border:solid black 2px;
+		color:black;
+		background-color:#ffefd7;
+
+	}
+	#our-btn:hover{
+		background-color:black;
+		color:#ffefd7;
+
+	}
+	</style>
 </head>
 <body>
+<header><h1>Find Work</h1>
+<a href="../homepage/index.php"><button id="our-btn">Back</button></a></header>
 <div class="container">
 	<p id="success"></p>
+	
         <div class="table-wrapper" style="overflow-x:auto;">
             <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-6">
-						<h2>Find <b>Work</b></h2>
-					</div>
+               
+                    
+						
+					
 					<!-- <div class="col-sm-6">
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons"></i> <span>Add New User</span></a>
 						<a href="JavaScript:void(0);" class="btn btn-danger" id="delete_multiple"><i class="material-icons"></i> <span>Delete</span></a>						
 					</div> -->
-                </div>
-            </div>
-            <table class="content-table">
+               
+			</div>
+			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for work..">
+			<input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Work Provider Name.."><br></br>
+
+            <table id="myTable" class="content-table">
                 <thead>
                     <tr>
-						<th>
-							<!-- <span class="custom-checkbox">
-								<input type="checkbox" id="selectAll">
-								<label for="selectAll"></label>
-							</span> -->
-						</th>
+						
 						<th>SL NO</th>
 						<th>JOB</th>
                         <th>NAME</th>
@@ -58,13 +129,8 @@ include 'database.php';
 					$i=1;
 					while($row = mysqli_fetch_array($result)) {
 				?>
-				<tr id="<?php echo $row["id"]; ?>">
-				<td>
-							<!-- <span class="custom-checkbox">
-								<input type="checkbox" class="user_checkbox" data-user-id="<?php echo $row["id"]; ?>">
-								<label for="checkbox2"></label>
-							</span> -->
-						</td>
+				<tr id="<?php echo $row["id"]; ?>"> 
+				    
 					<td><?php echo $i; ?></td>
 					<td><?php echo $row["job"]; ?></td>
 					<td><?php echo $row["name"]; ?></td>
@@ -72,8 +138,11 @@ include 'database.php';
 					<td><?php echo $row["phone"]; ?></td>
 					<td><?php echo $row["city"]; ?></td>
 					<td>
-						<a href="#addEmployeeModal" class="edit" data-toggle="modal">
-							<button>Apply</button>
+						<style>
+						
+							</style>
+						<a style="color:black;" href="#addEmployeeModal" class="edit" data-toggle="modal">
+							<button id="our-btn">Apply</button>
 						</a>
 						
                     </td>
@@ -133,47 +202,6 @@ include 'database.php';
 
 
 
-	<!-- Edit Modal HTML -->
-	<div id="editEmployeeModal" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form id="update_form" method="POST" action="save.php">
-					<div class="modal-header">						
-						<h4 class="modal-title">Edit User</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					</div>
-					<div class="modal-body">
-						<input type="hidden" id="id_u" name="id" class="form-control" required>		
-						<div class="form-group">
-							<label>Job</label>
-							<input type="text" id="name_u" name="job" class="form-control" required>
-						</div>			
-						<div class="form-group">
-							<label>Name</label>
-							<input type="text" id="name_u" name="name" class="form-control" required>
-						</div>
-						<div class="form-group">
-							<label>Email</label>
-							<input type="email" id="email_u" name="email" class="form-control" required>
-						</div>
-						<div class="form-group">
-							<label>Phone</label>
-							<input type="phone" id="phone_u" name="phone" class="form-control" required>
-						</div>
-						<div class="form-group">
-							<label>City</label>
-							<input type="city" id="city_u" name="city" class="form-control" required>
-						</div>					
-					</div>
-					<div class="modal-footer">
-					<input type="hidden" value="2" name="type">
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<button type="button" class="btn btn-info" id="update">Update</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
 	
 
 </body>
