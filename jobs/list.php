@@ -20,7 +20,7 @@ include 'database.php';
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="ajax.js"></script>
 	<script>
-
+	
 function myFunction() {
   // Declare variables
   var input, filter, table, tr, td, i, txtValue;
@@ -32,6 +32,27 @@ function myFunction() {
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+function myFunction3() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput3");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[5];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -86,6 +107,15 @@ function myFunction2() {
 		color:#ffefd7;
 
 	}
+	#myInput,#myInput2,#myInput3{
+		padding:10px;
+		margin:10px;
+		border: solid black 2px;
+	}
+	#searchopt{
+		padding:10px;
+		margin: 10px;
+	}
 	</style>
 </head>
 <body>
@@ -106,8 +136,14 @@ function myFunction2() {
 					</div> -->
                
 			</div>
+			<div id="searchopt">
 			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for work..">
-			<input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Work Provider Name.."><br></br>
+			<input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Work Provider Name..">
+			<input type="text" id="myInput3" onkeyup="myFunction3()" placeholder="Search by city..">
+
+
+			</div>
+			<br></br>
 
             <table id="myTable" class="content-table">
                 <thead>
