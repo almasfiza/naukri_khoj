@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naukri Khoj</title>
 </head>
@@ -24,7 +24,7 @@
             <a href="#about-us">About us</a>
             <a href="#work-seeker">Work Seeker</a>
             <a href="#work-provider">Work Provider</a>
-            <a href="#incubation">My Business</a>
+           
             <a href="#contact-us">Contact Us</a>
 
         </div>
@@ -107,7 +107,7 @@
         <p>Our target audience is the Low Wage Workforce- applying for jobs
             Construction Companies, Restaurant chains, Factories, Business in
             general, requiring workforce, Domestic help,laundry service,
-            watchman etcetera. Haven't registered yet? <a href="../work-seeker/register.html">Register here.</a>
+            watchman etcetera. 
         </p>
         <a href="../jobs/list.php"><button id="set-up-bus-but">Find Work!</button></a>
     
