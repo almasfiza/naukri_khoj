@@ -1,9 +1,21 @@
 <link rel="stylesheet" href="../CSS/profile.css">
+<link rel="stylesheet" href="../CSS/table.css">
 <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 	body.modal-open div.modal-backdrop { z-index: 0; }
+	header{
+		background-color:#ffefd7;
+		padding:30px;
+		margin:0px;
+		border: solid black 2px;
+	}
+	footer{
+		background-color:#ffefd7;
+		
+
+	}
 
 </style>
 <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
@@ -44,70 +56,27 @@
 			  $usersData = getUsersData(getId($_SESSION['name']));
 			  ?>
 
-<div class="wrapper">
-   <div class="left">
-      
-      <h2><?php echo $usersData['name'];?></h2>
-      
-    </div>
-    <div class="right">
-      <div class="info">
-        <h3>Information</h3>
-        <div class="info_data">
-            <div class="data">
-              <h3>City</h3>
-              <p><?php echo $usersData['city'];?></p>
-            </div>
-            <div class="data">
-				<h3>Phone</h3>
-				<p><?php echo $usersData['phone'];?></p>
-                <p></p>
-            </div>
-        </div>
-      </div>
-
-      <div class="job_details">
-        <h3>Job Details</h3>
-        <div class="job_data">
-          <div class="data">
-            <h3>Recent</h3>
-            <p><?php echo $usersData['work'];?></p>
-          </div>
-        </div>    
-      </div>
-
-     
-                      
-      
-                      
-      
-
-      <div class="nav_bar" id="logout-btn">
-        <a href="../homepage/index.php">
-          <input type="submit" name="logout" id="logout-btn" value="Log Out">
-        </a>
-        
-      </div>
-      
-  </div>
-
-   <!-- Listing the job -->
-
-   <div class="container" style="overflow-x:auto;">
+  <header>
+  <h1>Hello <?php echo $username ?></h1>
+  <a href="../homepage/index.php"><button>Logout</button></a>
+  </header>
+  <!-- Listing the job -->
+  
+  <div class="container" style="overflow-x:auto;">
 	<p id="success"></p>
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Jobs Listed</b></h2>
+						<h2>Work Listed</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons"></i> <span>Add New User</span></a>
+						<a href="#addEmployeeModal" data-toggle="modal"><button>Add Work</button></a>
 												
 					</div>
                 </div>
             </div>
-            <table class="table table-striped table-hover">
+            <table class="content-table">
                 <thead>
                     <tr>
 						<th>
@@ -136,7 +105,7 @@
 						</td>
 					<td><?php echo $i; ?></td>
 					<td><?php echo $row["job"]; ?></td>
-					<td><?php echo $row["name"]; ?></td>
+					<td><?php echo $username; ?></td>
 					<td><?php echo $row["email"]; ?></td>
 					<td><?php echo $row["phone"]; ?></td>
 					<td><?php echo $row["city"]; ?></td>
@@ -164,7 +133,66 @@
 			</table>
 			
         </div>
-    </div>
+
+		<div class="container" style="overflow-x:auto;">
+	<p id="success"></p>
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+						<h2>Work Applications</b></h2>
+					</div>
+					
+                </div>
+            </div>
+            <table class="content-table">
+                <thead>
+                    <tr>
+						<th></th>
+						<th>SL NO</th>
+						<th>JOB</th>
+                        <th>NAME</th>
+                        <th>EMAIL</th>
+						<th>PHONE</th>
+                        <th>CITY</th>
+                        
+                    </tr>
+                </thead>
+				<tbody>
+				
+        <?php
+          
+				  $result = mysqli_query($con,"SELECT * FROM `application` WHERE providerName = '$username' ");
+					$i=1;
+					while($row = mysqli_fetch_array($result)) {
+				?>
+				<tr id="<?php echo $row["id"]; ?>">
+				<td>
+							
+						</td>
+					<td><?php echo $i; ?></td>
+					<td><?php echo $row["job"]; ?></td>
+					<td><?php echo $username; ?></td>
+					<td><?php echo $row["seekerName"]; ?></td>
+					<td><?php echo $row["seekerNo"]; ?></td>
+					<td><?php echo $row["seekerCity"]; ?></td>
+			
+				</tr>
+				<?php
+				$i++;
+				}
+				?>
+				</tbody>
+			</table>
+			
+        </div>
+		
+		
+       
+</div>
+ </div>
+
+   
 	<!-- Add Modal HTML -->
 	<div id="addEmployeeModal" class="modal fade" data-backdrop="false">
 		<div class="modal-dialog">
@@ -276,6 +304,9 @@
 
                  
 </div>
+<footer>
+
+</footer>
 
 
 			
