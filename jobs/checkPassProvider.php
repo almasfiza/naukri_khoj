@@ -153,6 +153,7 @@
 						</a>
 						<a href="#deleteEmployeeModal" class="delete" data-id="<?php echo $row["id"]; ?>" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" 
 						 title="Delete"></i></a>
+						<a href="applications.php?provName=<?php echo $row["name"]; ?>&job=<?php echo $row["job"]; ?>"><button>View Applications</button></a>
                     </td>
 				</tr>
 				<?php
