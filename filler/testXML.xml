@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="test.xsl"?>
+<Job>
+ <jobinfo>
+  <labour>Unemployment Rate</labour>
+  <last>7.00</last>
+  <previous>6.70</previous>
+  <highest>23.50</highest>
+  <lowest>6.70</lowest>
+  <unit>percent</unit>
+ </jobinfo>
+ <jobinfo>
+  <labour>Labour Force Participation Rate</labour>
+  <last>49.80</last>
+  <previous>50.40</previous>
+  <highest>63.70</highest>
+  <lowest>49.80</lowest>
+  <unit>percent</unit>
+ </jobinfo>
+ <jobinfo>
+  <labour>Population</labour>
+  <last>1312.24</last>
+  <previous>1298.04</previous>
+  <highest>1312.24</highest>
+  <lowest>359.00</lowest>
+  <unit>million</unit>
+ </jobinfo>
+ <jobinfo>
+  <labour>Retirement Age-Women</labour>
+  <last>60.00</last>
+  <previous>60.00</previous>
+  <highest>60.00</highest>
+  <lowest>60.00</lowest>
+  <unit></unit>
+ </jobinfo>
+ <jobinfo>
+  <labour>Retirement Age-Men</labour>
+  <last>60.00</last>
+  <previous>60.00</previous>
+  <highest>60.00</highest>
+  <lowest>60.00</lowest>
+  <unit></unit>
+ </jobinfo>
+ <jobinfo>
+  <labour>Youth Unemployment Rate</labour>
+  <last>23.70</last>
+  <previous>23.10</previous>
+  <highest>23.70</highest>
+  <lowest>22.90</lowest>
+  <unit>percent</unit>
+ </jobinfo>
+ <jobinfo>
+  <labour>Minimum Wages</labour>
+  <last>178.00</last>
+  <previous>178.00</previous>
+  <highest>178.00</highest>
+  <lowest>35.00</lowest>
+  <unit>INR/day</unit>
+ </jobinfo>
+ <jobinfo>
+  <labour>Employment Rate</labour>
+  <last>46.80</last>
+  <previous>47.80</previous>
+  <highest>50.80</highest>
+  <lowest>46.80</lowest>
+  <unit>percent</unit>
+ </jobinfo>
+
+ 
+</Job>

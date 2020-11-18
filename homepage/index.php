@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naukri Khoj</title>
+    
 </head>
 <body>
     <!--HEADER FOR THE HOMEPAGE-->
@@ -24,7 +25,7 @@
             <a href="#about-us">About us</a>
             <a href="#work-seeker">Work Seeker</a>
             <a href="#work-provider">Work Provider</a>
-           
+            <a href="../filler/testXML.xml">Statistics</a>
             <a href="#contact-us">Contact Us</a>
 
         </div>

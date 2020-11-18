@@ -81,6 +81,7 @@
                 <div class="row">
                     <div class="col-sm-6">
 						<h2>Work Listed</b></h2>
+						<p>Refresh the page once after deleting work listings.</p>
 					</div>
 					<div class="col-sm-6">
 						<a href="#addEmployeeModal" data-toggle="modal"><button id="our-btn">Add Work</button></a>
@@ -91,9 +92,7 @@
             <table class="content-table">
                 <thead>
                     <tr>
-						<th>
-							
-						</th>
+						
 						<th>SL NO</th>
 						<th>JOB</th>
                         <th>NAME</th>
@@ -112,9 +111,7 @@
 					while($row = mysqli_fetch_array($result)) {
 				?>
 				<tr id="<?php echo $row["id"]; ?>">
-				<td>
-							
-						</td>
+				
 					<td><?php echo $i; ?></td>
 					<td><?php echo $row["job"]; ?></td>
 					<td><?php echo $username; ?></td>
@@ -153,6 +150,7 @@
                 <div class="row">
                     <div class="col-sm-6">
 						<h2>Work Applications</b></h2>
+						
 					</div>
 					
                 </div>
@@ -211,7 +209,7 @@
 			<div class="modal-content">
 				<form id="user_form" method="POST" action="save.php">
 					<div class="modal-header">						
-						<h4 class="modal-title">Add User</h4>
+						<h4 class="modal-title">Add Work</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					</div>
 					<div class="modal-body">		
@@ -252,7 +250,7 @@
 			<div class="modal-content">
 				<form id="update_form" method="POST" action="save.php">
 					<div class="modal-header">						
-						<h4 class="modal-title">Edit User</h4>
+						<h4 class="modal-title">Edit Work</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					</div>
 					<div class="modal-body">
@@ -294,7 +292,7 @@
 				<form action="save.php" method="POST" >
 						
 					<div class="modal-header">						
-						<h4 class="modal-title">Delete User</h4>
+						<h4 class="modal-title">Delete Work</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
                  
@@ -326,7 +324,7 @@
 		}	
 	}
 		else{
-			echo "No User Found";
+			?>"<script>window.location = '../filler/noUser.html'</script>";<?php
 		}
 	}
 	$conn->close();

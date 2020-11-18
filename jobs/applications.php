@@ -29,7 +29,7 @@ $job= $_GET['job'];
             <table class="content-table">
                 <thead>
                     <tr>
-						<th></th>
+						
 						<th>SL NO</th>
 						<th>JOB</th>
                         <th>NAME</th>
@@ -48,9 +48,7 @@ $job= $_GET['job'];
 					while($row = mysqli_fetch_array($result)) {
 				?>
 				<tr id="<?php echo $row["id"]; ?>">
-				<td>
-							
-						</td>
+				
 					<td><?php echo $i; ?></td>
 					<td><?php echo $row["job"]; ?></td>
 					<td><?php echo $row["providerName"]; ?></td>
