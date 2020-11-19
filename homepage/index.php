@@ -9,13 +9,32 @@
     
 </head>
 <body>
+<!--Google Translate-->    
+<div id="google_translate_element_id"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element_id');
+}
+</script>
+
+    <script type="text/javascript">
+        (function(){var gtConstEvalStartTime = new Date();/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function d(b){var a=document.getElementsByTagName("head")[0];a||(a=document.body.parentNode.appendChild(document.createElement("head")));a.appendChild(b)}function _loadJs(b){var a=document.createElement("script");a.type="text/javascript";a.charset="UTF-8";a.src=b;d(a)}function _loadCss(b){var a=document.createElement("link");a.type="text/css";a.rel="stylesheet";a.charset="UTF-8";a.href=b;d(a)}function _isNS(b){b=b.split(".");for(var a=window,c=0;c<b.length;++c)if(!(a=a[b[c]]))return!1;return!0}
+function _setupNS(b){b=b.split(".");for(var a=window,c=0;c<b.length;++c)a.hasOwnProperty?a.hasOwnProperty(b[c])?a=a[b[c]]:a=a[b[c]]={}:a=a[b[c]]||(a[b[c]]={});return a}window.addEventListener&&"undefined"==typeof document.readyState&&window.addEventListener("DOMContentLoaded",function(){document.readyState="complete"},!1);
+if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google.translate._const');c._cest = gtConstEvalStartTime;gtConstEvalStartTime = undefined;c._cl='en';c._cuc='googleTranslateElementInit';c._cac='';c._cam='';c._ctkk='445331.1849841895';var h='translate.googleapis.com';var s=(true?'https':window.location.protocol=='https:'?'https':'http')+'://';var b=s+h;c._pah=h;c._pas=s;c._pbi=b+'/translate_static/img/te_bk.gif';c._pci=b+'/translate_static/img/te_ctrl3.gif';c._pli=b+'/translate_static/img/loading.gif';c._plla=h+'/translate_a/l';c._pmi=b+'/translate_static/img/mini_google.png';c._ps=b+'/translate_static/css/translateelement.css';c._puh='translate.google.com';_loadCss(c._ps);_loadJs(b+'/translate_static/js/element/main.js');})();})();
+    </script>
     <!--HEADER FOR THE HOMEPAGE-->
     <div class="container">
         <header>
             <img class="logo" src="../Assets/logo.png" alt=""><h1>Naukri Khoj</h1>
             
             <h3>Work search platform for low wage workforce</h3>
-            <a href="./homepageHindi.html">Hindi</a>
+            
             
         </header>
     </div>
@@ -145,7 +164,7 @@
             <label for="password">Password:</label>
             <input type="password" name="password" id="password">
             <br></br>
-            <a href="../forgotPass.html">Forgot password?</a>
+          
             <br></br>
             <input type="submit" name="login" id="login-btn" value="Log In" >
         </form>
@@ -169,22 +188,17 @@
    
     <!--CONTACT US SECTION-->
     <footer id="contact-us">
-        Contact: ----------
+        Contact:  022-28928585 / +91 9136951119 / 022-28954787
         <br></br>
         
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.8915502615405!2d72.8536084149074!3d19.243557651684846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b13affffffff%3A0xfd071f1d3a7844ef!2sSt.%20Francis%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1602675310782!5m2!1sen!2sin" width="200" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
            
         </iframe>
         <br>
-        We are located at
+        We are located at:
+        ST. FRANCIS INSTITUTE OF TECHNOLOGY (ENGG. COLLEGE)  Mount Poinsur, S.V.P. Road, Borivali (West), Mumbai 400 103.
     
     </footer>
-    <script type = "text/javascript" src="https://gistlangserver.in/content/wsltoolbar/scripts/gotranslateweblocalizer/latest/static/gotwl.min.js"></script>
 
-    <script type = "text/javascript">
-    window.onload = function(){
-        showSnippetBar();
-    }
-    </script>
 </body>
 </html>
