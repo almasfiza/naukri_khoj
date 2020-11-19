@@ -31,7 +31,7 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
     <!--HEADER FOR THE HOMEPAGE-->
     <div class="container">
         <header>
-            <img class="logo" src="../Assets/logo.png" alt=""><h1>Naukri Khoj</h1>
+            <img class="logo" src="Assets/logo.png" alt=""><h1>Naukri Khoj</h1>
             
             <h3>Work search platform for low wage workforce</h3>
             
@@ -44,7 +44,7 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
             <a href="#about-us">About us</a>
             <a href="#work-seeker">Work Seeker</a>
             <a href="#work-provider">Work Provider</a>
-            <a href="../filler/testXML.xml">Statistics</a>
+            <a href="filler/testXML.xml">Statistics</a>
             <a href="#contact-us">Contact Us</a>
 
         </div>
@@ -89,19 +89,19 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
                   <input type="radio" name="slider" class="trigger" id="one" checked="checked" />
                   <div class="slide">
                     <figure class="slide-figure">
-                      <img class="slide-img" src="../Assets/img6.png" />
+                      <img class="slide-img" src="Assets/img6.png" />
                     </figure><!-- .slide-figure -->
                   </div><!-- .slide -->
                   <input type="radio" name="slider" class="trigger" id="two" />
                   <div class="slide">
                     <figure class="slide-figure">
-                      <img class="slide-img" src="../Assets/img4.png" />
+                      <img class="slide-img" src="Assets/img4.png" />
                     </figure><!-- .slide-figure -->
                   </div><!-- .slide -->
                   <input type="radio" name="slider" class="trigger" id="three" />
                   <div class="slide">
                     <figure class="slide-figure">
-                      <img class="slide-img" src="../Assets/img5.png" />
+                      <img class="slide-img" src="Assets/img5.png" />
                     </figure><!-- .slide-figure -->
                   </div><!-- .slide -->
                 </div><!-- .slider -->
@@ -129,7 +129,7 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
             general, requiring workforce, Domestic help,laundry service,
             watchman etcetera. 
         </p>
-        <a href="../jobs/list.php"><button id="set-up-bus-but">Find Work!</button></a>
+        <a href="jobs/list.php"><button id="set-up-bus-but">Find Work!</button></a>
     
 
         <!-- <form action="../work-seeker/profile.html" id="login-work-seeker">
@@ -152,12 +152,12 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
         <h3>Are you a work provider?</h3>
              
         <p>Help the low wage workforce by posting job openings. Enter your name, or the company name to log in.
-            Haven't registered yet? <a href="../work-provider/register.html">Register here.</a> 
+            Haven't registered yet? <a href="work-provider/register.html">Register here.</a> 
         </p>
 
 
         <?php if(!isset($_SESSION['username'])) { ?>
-        <form action="../jobs/checkPassProvider.php" method="POST" id="login-work-provider">
+        <form action="jobs/checkPassProvider.php" method="POST" id="login-work-provider">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name">
             <br></br>
@@ -177,7 +177,7 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
        
         <?php if(isset($_SESSION['username']))
 {
-    echo "<script>window.location.assign('../work-provider/profile.php')</script>";
+    echo "<script>window.location.assign('work-provider/profile.php')</script>";
   ?>
 <?php 
       }
