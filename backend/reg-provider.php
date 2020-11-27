@@ -1,6 +1,6 @@
 <?php
 //database connection
-$con=mysqli_connect('localhost','root','');
+$con=mysqli_connect('sql107.epizy.com','epiz_27232332','flM9LkeGa0Pmb');
 
 if(!$con){
 	echo "No DB connection";
@@ -15,7 +15,7 @@ $work = $_POST['work'];
 
 
 //selection of database where the input data will be stored
-mysqli_select_db($con,'backend');
+mysqli_select_db($con,'epiz_27232332_db');
 
 
 // Attempt insert query execution

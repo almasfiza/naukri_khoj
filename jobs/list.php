@@ -217,7 +217,8 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
 			<div class="modal-content">
 				<form id="user_form" method="POST" action="save.php">
 					<div class="modal-header">						
-						<h4 class="modal-title">Add User</h4>
+						<h4 class="modal-title">Apply </h4>
+						Add the details
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					</div>
 					<div class="modal-body">	

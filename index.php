@@ -4,11 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naukri Khoj</title>
-    
+    <style>
+        #loading{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff 
+  url('Assets/25.gif')
+  no-repeat center;
+  z-index: 99999;
+}
+        </style>
 </head>
-<body>
+<body onload="load()">
+<div id="loading"></div>
 <!--Google Translate-->    
 <div id="google_translate_element_id"></div>
 
@@ -199,6 +211,12 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
         ST. FRANCIS INSTITUTE OF TECHNOLOGY (ENGG. COLLEGE)  Mount Poinsur, S.V.P. Road, Borivali (West), Mumbai 400 103.
     
     </footer>
+    <script>
+     var preloader = document.getElementById('loading');
+     function load(){
+        preloader.style.display = 'none';
+     }
+ </script>
 
 </body>
 </html>

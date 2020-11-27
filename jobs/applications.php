@@ -2,12 +2,12 @@
 <?php
 $var_value = $_SESSION['name'];
 //database connection
-$con=mysqli_connect('localhost','root','');
+$con=mysqli_connect('sql107.epizy.com','epiz_27232332','flM9LkeGa0Pmb');
 
 if(!$con){
 	echo "No DB connection";
 }
-mysqli_select_db($con,'backend');
+mysqli_select_db($con,'epiz_27232332_db');
 $providerName = $_GET['provName'];
 $job= $_GET['job'];
 
